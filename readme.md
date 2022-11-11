@@ -1,2 +1,1 @@
-to run bash shell script
-    sh filename.sh
+Automate GNU / Linux command  
