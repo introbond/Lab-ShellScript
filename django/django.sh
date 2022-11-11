@@ -1,0 +1,39 @@
+#!/bin/sh
+initial () {
+    python3 --version
+    pip --version
+}
+
+create () {
+    python3 -m venv appEnv
+    touch .gitignore
+    echo "appEnv/" >> .gitignore
+}
+
+activate () {
+    source appEnv/bin/activate
+}
+
+install () {
+    python3 -m pip install Django
+    django-admin --version
+    pip freeze > requirements.txt
+    echo "********* install successfully **********"
+}
+
+createApp () {
+    django-admin startproject myapp
+}
+
+startApp () {
+    cd myapp
+    python3 manage.py runserver
+    echo "********* server is running at port 8000 **********"
+}
+
+initial
+create
+activate
+install
+createApp
+startApp
