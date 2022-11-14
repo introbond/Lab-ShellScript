@@ -23,6 +23,7 @@ installPulgin () {
     echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
     exec "$SHELL"
 }
+
 prerequisite
 install
 installPulgin
