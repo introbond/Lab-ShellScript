@@ -5,6 +5,7 @@ initial () {
 }
 
 create () {
+    #pyenv virtualenv 3.6.5 venv_myproject
     python3 -m venv appEnv
     touch .gitignore
     echo "appEnv/" >> .gitignore

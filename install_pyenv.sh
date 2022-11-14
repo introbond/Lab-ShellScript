@@ -18,5 +18,11 @@ install () {
     exec "$SHELL"
 }
 
+installPulgin () {
+    git clone https://github.com/pyenv/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv
+    echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+    exec "$SHELL"
+}
 prerequisite
 install
+installPulgin
