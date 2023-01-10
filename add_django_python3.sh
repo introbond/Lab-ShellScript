@@ -6,13 +6,13 @@ initial () {
 
 create () {
     #pyenv virtualenv 3.6.5 venv_myproject
-    python3 -m venv appEnv
+    python3 -m venv env
     touch .gitignore
-    echo "appEnv/" >> .gitignore
+    echo "env/" >> .gitignore
 }
 
 activate () {
-    source appEnv/bin/activate
+    source env/bin/activate
 }
 
 install () {
