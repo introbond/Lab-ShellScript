@@ -19,7 +19,14 @@ if [ -e env/ ]
     else
         echo "===== start create venv ====="
         initial
+fi
+
+if [ -e requirements.txt ]
+    then
+        echo "===== start install requirements  ====="
         install
+    else
+        echo "===== please manual install requirements (pip) ====="
 fi
 
 if [ -e .gitignore ]
